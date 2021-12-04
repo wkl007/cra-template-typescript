@@ -1,0 +1,34 @@
+{
+  "name": "@wkl--007/cra-template-typescript",
+  "version": "1.0.0",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "typescript"
+  ],
+  "description": "The base TypeScript template for Create React App.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wkl007/create-react-app.git",
+    "directory": "packages/cra-template-typescript"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "bugs": {
+    "url": "https://github.com/wkl007/create-react-app/issues"
+  },
+  "author": {
+    "name": "wkl007",
+    "email": "499657357@qq.com"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
