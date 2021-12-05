@@ -10,8 +10,7 @@
   "description": "The base TypeScript template for Create React App.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wkl007/cra-template-typescript.git",
-    "directory": "packages/cra-template-typescript"
+    "url": "https://github.com/wkl007/cra-template-typescript.git"
   },
   "license": "MIT",
   "engines": {
