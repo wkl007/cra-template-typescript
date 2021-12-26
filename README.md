@@ -11,7 +11,7 @@ npx create-react-app my-app --template @wkl--007/cra-template-typescript
 
 # or
 
-yarn create-react-app my-app --template @wkl--007/cra-template-typescript
+yarn create react-app my-app --template @wkl--007/cra-template-typescript
 ```
 
 For more information, please refer to:
