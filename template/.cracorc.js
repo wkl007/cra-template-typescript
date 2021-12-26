@@ -1,17 +1,12 @@
 const { when, whenProd } = require('@craco/craco')
 const CracoLessPlugin = require('craco-less')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const WebpackBar = require('webpackbar')
-const BundleAnalyzerPlugin =
-  require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const TerserPlugin = require('terser-webpack-plugin')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
-const GitReversionPlugin = require('git-revision-webpack-plugin')
 const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin')
 
 const resolve = (dir) => require('path').join(__dirname, dir)
-
-const gitRevisionPlugin = new GitReversionPlugin()
 
 const isBuildAnalyzer = process.env.BUILD_ANALYZER === 'true'
 
@@ -19,9 +14,11 @@ module.exports = {
   reactScriptsVersion: 'react-scripts',
   style: {},
   devServer: {
-    overlay: {
-      warnings: false,
-      errors: false,
+    client: {
+      overlay: {
+        warnings: false,
+        errors: false,
+      },
     },
     port: 3030,
   },
@@ -88,18 +85,6 @@ module.exports = {
         []
       ),
     ],
-    configure: (webpackConfig, { env, paths }) => {
-      webpackConfig.plugins.map((plugin) => {
-        if (plugin instanceof HtmlWebpackPlugin) {
-          plugin.options.git = {
-            branch: gitRevisionPlugin.branch(),
-            version: gitRevisionPlugin.version(),
-            commitHash: gitRevisionPlugin.commithash(),
-          }
-        }
-      })
-      return webpackConfig
-    },
   },
   plugins: [
     {

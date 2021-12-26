@@ -3,14 +3,14 @@ module.exports = {
     'stylelint-config-standard',
     'stylelint-config-rational-order',
     'stylelint-config-prettier',
-    'stylelint-config-html'
+    'stylelint-config-html',
   ],
   plugins: ['stylelint-order'],
   overrides: [
     {
       files: ['**/*.less'],
-      customSyntax: 'postcss-less'
-    }
+      customSyntax: 'postcss-less',
+    },
   ],
   rules: {
     'no-empty-source': null,
